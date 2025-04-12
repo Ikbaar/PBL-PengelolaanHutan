@@ -21,14 +21,14 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">TRPL</span>
+            <span class="sitename">PH</span>
           </a>
           <div class="footer-contact pt-3">
             <p>Politeknik Pertanian Negeri Samarinda</p>
             <p>Jalan Sam Ratulangi, Kec. Samarinda Seberang</p>
             <p>Kota Samarinda, Kalimantan Timur 75242</p>
             <p class="mt-3"><strong>Phone:</strong> <span>(0541) 260421, 260680</span></p>
-            <p><strong>Email:</strong> <span>admintrpl@politanisamarinda.ac.id</span></p>
+            <p><strong>Email:</strong> <span>adminph@politanisamarinda.ac.id</span></p>
           </div>
         </div>
 
@@ -67,7 +67,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Teknologi Rekayasa Perangkat Lunak</strong></strong><span>-</span><strong class="px-1 sitename">Politeknik Pertanian Negeri Samarinda</strong></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Pengelolaan Hutan</strong></strong><span>-</span><strong class="px-1 sitename">Politeknik Pertanian Negeri Samarinda</strong></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->

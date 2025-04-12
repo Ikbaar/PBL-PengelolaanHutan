@@ -8,6 +8,12 @@ use App\Http\Controllers\Admin\AlasanController;
 use App\Http\Controllers\Admin\AdminBeritaController;
 use App\Http\Controllers\Admin\AlasanBannerController;
 use App\Http\Controllers\Admin\AdminOutputLulusanController;
+use App\Http\Controllers\Admin\SejarahController;
+use App\Http\Controllers\Admin\VisiController;
+use App\Http\Controllers\Admin\MisiController;
+use App\Http\Controllers\Admin\DosenController;
+use App\Http\Controllers\Admin\PLPController;
+
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -46,6 +52,48 @@ Route::post('/admin/output-lulusan/store', [AdminOutputLulusanController::class,
 Route::get('/admin/output-lulusan/edit/{id}', [AdminOutputLulusanController::class, 'edit'])->name('admin.output-lulusan.edit');
 Route::put('/admin/output-lulusan/update/{id}', [AdminOutputLulusanController::class, 'update'])->name('admin.output-lulusan.update');
 Route::delete('/admin/output-lulusan/delete/{id}', [AdminOutputLulusanController::class, 'delete'])->name('admin.output-lulusan.delete');
+
+Route::get('/profil', [IndexController::class, 'profil'])->name('profil');
+
+Route::get('admin/sejarah', [SejarahController::class, 'index'])->name('admin.sejarah.index');
+Route::get('admin/sejarah/create', [SejarahController::class, 'create'])->name('admin.sejarah.create');
+Route::post('admin/sejarah', [SejarahController::class, 'store'])->name('admin.sejarah.store');
+Route::get('admin/sejarah/{id}/edit', [SejarahController::class, 'edit'])->name('admin.sejarah.edit');
+Route::put('admin/sejarah/{id}', [SejarahController::class, 'update'])->name('admin.sejarah.update');
+Route::delete('admin/sejarah/{id}', [SejarahController::class, 'destroy'])->name('admin.sejarah.destroy');
+
+Route::get('admin/visi', [VisiController::class, 'index'])->name('admin.visi.index');
+Route::get('admin/visi/create', [VisiController::class, 'create'])->name('admin.visi.create');
+Route::post('admin/visi', [VisiController::class, 'store'])->name('admin.visi.store');
+Route::get('admin/visi/{id}/edit', [VisiController::class, 'edit'])->name('admin.visi.edit');
+Route::put('admin/visi/{id}', [VisiController::class, 'update'])->name('admin.visi.update');
+Route::delete('admin/visi/{id}', [VisiController::class, 'destroy'])->name('admin.visi.destroy');
+
+Route::get('admin/misi', [MisiController::class, 'index'])->name('admin.misi.index');
+Route::get('admin/misi/create', [MisiController::class, 'create'])->name('admin.misi.create');
+Route::post('admin/misi', [MisiController::class, 'store'])->name('admin.misi.store');
+Route::get('admin/misi/{id}/edit', [MisiController::class, 'edit'])->name('admin.misi.edit');
+Route::put('admin/misi/{id}', [MisiController::class, 'update'])->name('admin.misi.update');
+Route::delete('admin/misi/{id}', [MisiController::class, 'destroy'])->name('admin.misi.destroy');
+
+Route::get('/staff', [IndexController::class, 'staff'])->name('staff');
+
+
+Route::get('admin/dosen', [DosenController::class, 'index'])->name('admin.dosen.index');
+Route::get('admin/dosen/create', [DosenController::class, 'create'])->name('admin.dosen.create');
+Route::post('admin/dosen', [DosenController::class, 'store'])->name('admin.dosen.store');
+Route::get('admin/dosen/{id}/edit', [DosenController::class, 'edit'])->name('admin.dosen.edit');
+Route::put('admin/dosen/{id}', [DosenController::class, 'update'])->name('admin.dosen.update');
+Route::delete('admin/dosen/{id}', [DosenController::class, 'destroy'])->name('admin.dosen.destroy');
+
+Route::get('admin/plp', [PLPController::class, 'index'])->name('admin.plp.index');
+Route::get('admin/plp/create', [PLPController::class, 'create'])->name('admin.plp.create');
+Route::post('admin/plp', [PLPController::class, 'store'])->name('admin.plp.store');
+Route::get('admin/plp/{id}/edit', [PLPController::class, 'edit'])->name('admin.plp.edit');
+Route::put('admin/plp/{id}', [PLPController::class, 'update'])->name('admin.plp.update');
+Route::delete('admin/plp/{id}', [PLPController::class, 'destroy'])->name('admin.plp.destroy');
+
+
 
 Route::view('/lab-tanah-air', 'labs.tanah_dan_air')->name('lab.tanah_air');
 Route::view('/lab-konservasi', 'labs.konservasi')->name('lab.konservasi');

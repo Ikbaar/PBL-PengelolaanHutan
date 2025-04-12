@@ -23,7 +23,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>
-                                            <a href="{{ route('alasan.edit', $item->id) }}" class="btn btn-primary">Edit</a>
+                                            <a href="{{ route('alasan.edit', $item->id) }}" class="btn btn-warning">Edit</a>
                                             <form action="{{ route('alasan.delete', $item->id) }}" method="POST" style="display:inline;">
                                                 @csrf
                                                 @method('DELETE')

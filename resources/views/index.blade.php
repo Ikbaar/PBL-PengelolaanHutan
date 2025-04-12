@@ -49,7 +49,7 @@
         <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
           <div class="featured-item position-relative">
             <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-            <h4><a href="" class="stretched-link">Akreditasi</a></h4>
+            <h4><a href="{{ route('profil') }}#akreditasi" class="stretched-link">Akreditasi</a></h4>
             <p>Pelajari lebih lanjut tentang pencapaian akreditasi Program Studi Teknologi Rekayasa Perangkat Lunak</p>
           </div>
         </div><!-- End Featured Item -->
@@ -120,7 +120,7 @@
         <div class="col-12 col-lg-6 order-1 content">
           <div class="container section-title" data-aos="fade-up">
             {{-- <h2>10 Alasan Mengapa Masuk Teknologi Rekayasa Perangkat Lunak</h2> --}}
-          <h3>10 Alasan Mengapa Masuk Teknologi Rekayasa Perangkat Lunak</h3>
+          <h3>10 Alasan Mengapa Masuk Pengelolaan Hutan</h3>
           <div class="underline"></div>
           {{-- <p class="fst-italic">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore

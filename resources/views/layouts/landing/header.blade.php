@@ -3,7 +3,7 @@
     <div class="topbar d-flex align-items-center dark-background">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">admintrpl@politanisamarinda.ac.id</a></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">adminph@politanisamarinda.ac.id</a></i>
           <i class="bi bi-phone d-flex align-items-center ms-4"><span>(0541) 260421, 260680</span></i>
         </div>
         {{-- <div class="social-links d-none d-md-flex align-items-center">
@@ -18,19 +18,19 @@
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="/" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img src="{{ asset('assets/img/LogoTRPL.png') }}" alt="/">
-          <h1 class="sitename">TRPL<br></h1>
+          <img src="{{ asset('assets/img/logo-.png') }}" alt="/">
+          <h1 class="sitename">PH<br></h1>
         </a>
         <nav id="navmenu" class="navmenu">
           <ul>
             <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="#">Sejarah</a></li>
-                <li><a href="#">Visi & Misi</a></li>
-                <li><a href="#">Struktur Organisasi</a></li>
-                <li><a href="#">Dosen</a></li>
-                <li><a href="#">PLP & Admin</a></li>
-                <li><a href="#">Akreditasi</a></li>
+                <li><a href="{{ route('profil') }}">Sejarah</a></li>
+                <li><a href="{{ route('profil') }}#visi-misi">Visi & Misi</a><li>                </li>
+                <li><a href="{{ route('profil') }}#struktur">Struktur Organisasi</a></li>
+                <li><a href="{{ route('staff') }}">Dosen</a></li>
+                <li><a href="{{ route('staff') }}#plp-admin">PLP & Admin</a></li>
+                <li><a href="{{ route('profil') }}#akreditasi">Akreditasi</a></li>
                 <li class="dropdown"><a href="#"><span>Fasilitas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="{{ route('lab.tanah_air') }}">Lab Tanah dan Air</a></li>

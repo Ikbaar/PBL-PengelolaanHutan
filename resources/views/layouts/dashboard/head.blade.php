@@ -28,6 +28,10 @@
 <!-- Include stylesheet -->
 <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
 
+<!-- CKEditor CDN -->
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+
+
 {{-- <!-- Scripts -->
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 

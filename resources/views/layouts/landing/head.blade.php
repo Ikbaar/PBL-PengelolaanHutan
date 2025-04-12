@@ -1,11 +1,11 @@
 <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Teknologi Rekayasa Perangkat Lunak</title>
+  <title>Pengelolaan Hutan</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/LogoTRPL.png" rel="icon">
+  <link href="assets/img/logo-.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
