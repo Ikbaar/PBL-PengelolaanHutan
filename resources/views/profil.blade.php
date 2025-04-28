@@ -2,11 +2,18 @@
 @section('content')
 <section id="sejarah" class="sejarah">
     <div class="container">
-        <h2 class="text-center mb-4">Sejarah</h2>
+        <p class="section-subtitle text-center">Perjalanan Kami</p>
+        <h2 class="text-center mb-3">Sejarah</h2>
+        <p class="section-intro text-center mb-5">
+            Mengenal lebih jauh tentang perjalanan dan perkembangan Prodi Pengelolaan Hutan dari masa ke masa.
+        </p>
+
         @if ($sejarah->isNotEmpty())
             @foreach ($sejarah as $item)
-                <div class="sejarah-item mb-4">
-                    <p>{!! $item->konten !!}</p>
+                <div class="sejarah-item">
+                    <div class="sejarah-item-content">
+                        <p>{!! $item->konten !!}</p>
+                    </div>
                 </div>
             @endforeach
         @else
@@ -14,6 +21,7 @@
         @endif
     </div>
 </section>
+
 
 <section id="visi-misi" class="visi-misi-section py-5">
   <div class="container">

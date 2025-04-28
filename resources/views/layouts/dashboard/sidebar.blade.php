@@ -3,8 +3,8 @@
 
 <li class="sidebar-item {{ request()->routeIs('admin.index') ? 'active' : '' }}">
     <a class="sidebar-link" href="{{ route('admin.index') }}">
-        <i class="align-middle" data-feather="sliders"></i> <span
-            class="align-middle">Dashboard</span>
+    <i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
+
     </a>
 </li>
 
@@ -36,5 +36,10 @@
     <a class="sidebar-link" href="{{ route('admin.plp.index') }}">
         <i class="align-middle" data-feather="papers"></i> <span class="align-middle">PLP & Admin</span>
     </a>
+    <a class="sidebar-link" href="{{ route('admin.akreditasi.index') }}">
+        <i class="align-middle" data-feather="papers"></i> <span class="align-middle">Akreditasi</span>
+    </a>
 </li>
+
+
 

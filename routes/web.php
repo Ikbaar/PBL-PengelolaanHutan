@@ -13,13 +13,14 @@ use App\Http\Controllers\Admin\VisiController;
 use App\Http\Controllers\Admin\MisiController;
 use App\Http\Controllers\Admin\DosenController;
 use App\Http\Controllers\Admin\PLPController;
+use App\Http\Controllers\Admin\AkreditasiController;
 
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Route::get('/',[IndexController::class, 'index']);
+Route::get('/',[IndexController::class, 'index'])->name('index');
 Route::get('/berita/{id}', [IndexController::class, 'beritaDetail'])->name('berita-detail');
 Route::get('/berita-lainnya', [IndexController::class, 'beritaLainnya'])->name('berita-lainnya');
 
@@ -92,6 +93,17 @@ Route::post('admin/plp', [PLPController::class, 'store'])->name('admin.plp.store
 Route::get('admin/plp/{id}/edit', [PLPController::class, 'edit'])->name('admin.plp.edit');
 Route::put('admin/plp/{id}', [PLPController::class, 'update'])->name('admin.plp.update');
 Route::delete('admin/plp/{id}', [PLPController::class, 'destroy'])->name('admin.plp.destroy');
+
+Route::get('/akreditasi', [IndexController::class, 'akreditasi'])->name('akreditasi');
+
+
+Route::get('admin/akreditasi', [AkreditasiController::class, 'index'])->name('admin.akreditasi.index');
+Route::get('admin/akreditasi/create', [AkreditasiController::class, 'create'])->name('admin.akreditasi.create');
+Route::post('admin/akreditasi', [AkreditasiController::class, 'store'])->name('admin.akreditasi.store');
+Route::get('admin/akreditasi/{id}/edit', [AkreditasiController::class, 'edit'])->name('admin.akreditasi.edit');
+Route::put('admin/akreditasi/{id}', [AkreditasiController::class, 'update'])->name('admin.akreditasi.update');
+Route::delete('admin/akreditasi/{id}', [AkreditasiController::class, 'destroy'])->name('admin.akreditasi.destroy');
+
 
 
 

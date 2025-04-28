@@ -25,7 +25,7 @@ class DosenController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'nip' => 'required|string|max:100|unique:dosens,nip',
-            'photo' => 'nullable|image|max:2048'
+            'photo' => 'nullable|image|max:15360'
         ]);
 
         $photoPath = null;
@@ -55,7 +55,7 @@ class DosenController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'nip' => 'required|string|max:100|unique:dosens,nip,' . $dosen->id,
-            'photo' => 'nullable|image|max:2048'
+            'photo' => 'nullable|image|max:15360'
         ]);
 
         $photoPath = $dosen->photo;

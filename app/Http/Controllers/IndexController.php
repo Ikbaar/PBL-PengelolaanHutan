@@ -11,6 +11,7 @@ use App\Models\Visi;
 use App\Models\Misi;
 use App\Models\Dosen;
 use App\Models\PLP;
+use App\Models\Akreditasi;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -45,6 +46,13 @@ public function staff()
 
     return view('staff', compact('dosen', 'plp'));
 }
+
+public function akreditasi()
+{
+    $akreditasi = Akreditasi::first(); // Mengambil satu data pertama
+    return view('akreditasi', compact('akreditasi'));
+}
+
 
 
     // Menampilkan detail berita berdasarkan ID

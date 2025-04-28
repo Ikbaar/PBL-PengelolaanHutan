@@ -30,7 +30,7 @@
                 <li><a href="{{ route('profil') }}#struktur">Struktur Organisasi</a></li>
                 <li><a href="{{ route('staff') }}">Dosen</a></li>
                 <li><a href="{{ route('staff') }}#plp-admin">PLP & Admin</a></li>
-                <li><a href="{{ route('profil') }}#akreditasi">Akreditasi</a></li>
+                <li><a href="{{ route('akreditasi') }}">Akreditasi</a></li>
                 <li class="dropdown"><a href="#"><span>Fasilitas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="{{ route('lab.tanah_air') }}">Lab Tanah dan Air</a></li>

@@ -35,8 +35,8 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Tautan Cepat</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Profil</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{{ route('index') }}">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{{ route('profil') }}">Profil</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Akademik</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Pengumuman</a></li>
           </ul>

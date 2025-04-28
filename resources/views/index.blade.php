@@ -6,7 +6,7 @@
     <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
       <div class="carousel-item active">
-        <img src="assets/img/slider-1.png" alt=""><!-- gambar benner -->
+        <img src="assets/img/Slide1.png" alt=""><!-- gambar benner -->
         <div class="carousel-container">
           {{-- <h2>Selamat Datang di Program Studi <span>Teknologi Rekayasa Perangkat Lunak</span></h2> --}}
           {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --}}
@@ -15,7 +15,7 @@
       </div><!-- End Carousel Item -->
 
       <div class="carousel-item">
-        <img src="assets/img/slider-2.png" alt="">
+      <img src="assets/img/Slide2.png" alt="">
         <div class="carousel-container">
           {{-- <h2>Jurusan <span>Rekayasa dan Komputer</span></h2>
           {{-- <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p> --}}
@@ -24,7 +24,7 @@
       </div><!-- End Carousel Item -->
 
       <div class="carousel-item">
-        <img src="assets/img/slider-3.png" alt="">
+      <img src="assets/img/Slide3.jpg" alt="">
         <div class="carousel-container">
           {{-- <h2>Politeknik Pertanian Negeri Samarinda</h2>
           {{-- <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p> --}}
@@ -49,8 +49,8 @@
         <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
           <div class="featured-item position-relative">
             <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-            <h4><a href="{{ route('profil') }}#akreditasi" class="stretched-link">Akreditasi</a></h4>
-            <p>Pelajari lebih lanjut tentang pencapaian akreditasi Program Studi Teknologi Rekayasa Perangkat Lunak</p>
+            <h4><a href="{{ route('akreditasi') }}" class="stretched-link">Akreditasi</a></h4>
+            <p>Pelajari lebih lanjut tentang pencapaian akreditasi Program Studi Pengolaan Hutan</p>
           </div>
         </div><!-- End Featured Item -->
 
@@ -90,6 +90,8 @@
         @endforeach --}}
         <!-- Output Lulusan Item -->
         <div class="col-12 col-lg-6 order-2 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="fw-bold mb-4">Lulusan Prodi PH</h2>
+
           @if ($outputLulusans->isNotEmpty())
           @foreach ($outputLulusans as $item)
             <a href="{{ route('output-lulusan-detail', $item->id) }}" class="position-relative text-decoration-none text-black services section">  
@@ -292,7 +294,7 @@
             }
           }
         </script>
-        <div class="swiper-wrapper align-items-center">
+        <!-- <div class="swiper-wrapper align-items-center">
           <div class="swiper-slide"><img src="assets/img/Huawei-Logo.png" class="img-fluid" alt=""></div>
           <div class="swiper-slide"><img src="assets/img/Oracle-Logo.png" class="img-fluid" alt=""></div>
           <div class="swiper-slide"><img src="assets/img/dicoding-logo-square.png" class="img-fluid" alt=""></div>
@@ -303,7 +305,7 @@
           <div class="swiper-slide"><img src="assets/img/" class="img-fluid" alt=""></div> --}}
         </div>
         <div class="swiper-pagination"></div>
-      </div>
+      </div> -->
 
     </div>
 

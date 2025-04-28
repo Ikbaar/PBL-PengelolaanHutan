@@ -35,10 +35,6 @@
   </div>
 </section>
 
-
-
-
-
 <section id="plp-admin" class="plp-admin-section">
   <div class="container">
     <h2 class="text-center mb-4">PLP & Admin</h2>

@@ -1,27 +1,26 @@
 @extends('layouts.landing.index')
 @section('content')
-<section id="akreditasi" class="section">
+<section id="akreditasi" class="akreditasi-section py-5 bg-light">
   <div class="container">
-    <h2 class="text-center mb-4">Akreditasi</h2>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        <p class="text-justify">
-          Laboratorium Tanah dan Air telah mendapatkan akreditasi dari Komite Akreditasi Nasional (KAN) dengan nomor registrasi 1234/SK/LAB/XX/2023. Akreditasi ini menunjukkan bahwa laboratorium kami telah memenuhi standar mutu dan teknis yang ditetapkan secara nasional.
-        </p>
-        <p class="text-justify">
-          Dengan akreditasi ini, kami berkomitmen untuk terus menjaga kualitas pelayanan dan hasil pengujian yang akurat serta terpercaya sesuai standar internasional.
+    @if($akreditasi)
+    <div class="row align-items-center">
+      <!-- Konten Teks -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h2 class="mb-3">{{ $akreditasi->judul }}</h2>
+        <p class="lead text-muted">
+          {!! nl2br(e(Str::limit($akreditasi->deskripsi, 300))) !!}
         </p>
       </div>
-    </div>
 
-    <!-- Gambar sertifikat akreditasi -->
-    <div class="row justify-content-center mt-4">
+      <!-- Gambar Sertifikat -->
       <div class="col-md-6 text-center">
-        <img src="{{ asset('storage/images/sertifikat-akreditasi.jpg') }}" alt="Sertifikat Akreditasi" class="img-fluid rounded shadow">
+        <img src="{{ asset('storage/' . $akreditasi->sertifikat_path) }}" alt="Sertifikat Akreditasi" class="img-fluid rounded shadow">
       </div>
     </div>
+    @else
+      <p class="text-center text-muted">Belum ada data akreditasi yang ditambahkan.</p>
+    @endif
   </div>
 </section>
 
-  @endsection
+@endsection

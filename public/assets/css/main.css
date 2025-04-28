@@ -22,14 +22,14 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #545454; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #60b446; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #006400; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #8a8a8a; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --contrast-color: #000; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #444444;  /* The default color of the main navmenu links */
+  --nav-color: #e5e4e2;  /* The default color of the main navmenu links */
   --nav-hover-color: #e5e4e2; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #f5f5dc; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -57,148 +57,436 @@
   scroll-behavior: smooth;
 }
 
-/*SEJARAH*/
+
+/* === Section Sejarah === */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap');
 
 .sejarah {
-  background-color: #f8f9fa;
-  padding: 60px 0;
-  
+  padding: 100px 0;
+  background: linear-gradient(180deg, #f9f9f6 0%, #ffffff 100%);
+  color: #2d2d2d;
+  font-family: 'Inter', sans-serif;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #5c7f67;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .sejarah h2 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 36px;
-  color: #333;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: #1e3d29;
+  margin-bottom: 20px;
 }
 
-.sejarah p {
-  font-size: 18px;
+.section-intro {
+  max-width: 680px;
+  margin: 0 auto 60px;
+  font-size: 17px;
+  line-height: 1.7;
+  text-align: center;
   color: #555;
-  line-height: 1.8;
 }
 
-/*Visi Misi*/
+.sejarah-item {
+  margin-bottom: 40px;
+}
 
+.sejarah-item-content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #5c7f67;
+  position: relative;
+  overflow: hidden;
+}
+
+.sejarah-item-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(92, 127, 103, 0.05);
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.sejarah-item-content:hover::before {
+  left: 0;
+}
+
+.sejarah-item-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.sejarah-item-content p {
+  font-size: 16px;
+  color: #2f2f2f;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+/* === Section Visi & Misi === */
 .visi-misi-section {
-  background-color: #f0f8ff;
-  height: 100vh;
+  background-color: #f4f9f4; /* Warna latar belakang yang lembut dan natural */
+  padding: 60px 20px;
+  color: #2f4f4f; /* Teks gelap yang tetap elegan */
+  font-family: 'Georgia', serif;
 }
 
 .visi-misi-section h2 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Playfair Display', serif;
   font-size: 36px;
-  color: #333;
+  color: #2e5e4e;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #6db37e; /* Garis bawah dengan warna hijau muda */
 }
 
-.visi-misi-section .card {
-  border: none;
-  border-radius: 12px;
-  transition: 0.3s ease;
+.card-body {
+  border-radius: 10px; /* Membuat sudut lebih lembut */
+  border: none; /* Menghilangkan border standar card */
+  transition: transform 0.3s ease;
 }
 
-.visi-misi-section .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+.card:hover {
+  transform: translateY(-4px); /* Efek hover untuk card */
 }
 
-.visi-misi-section .card-title {
+.card-body {
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 24px;
   font-weight: bold;
+  color: #2e5e4e;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.6;
   color: #444;
 }
 
-.visi-misi-section .card-text {
+.card-text ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.card-text ul li {
   font-size: 16px;
-  color: #555;
+  color: #444;
   line-height: 1.7;
 }
 
-/*struktur organisasi*/
+@media (max-width: 768px) {
+  .visi-misi-section {
+      padding: 40px 15px;
+  }
 
-.struktur-section {
-  height: 100vh;
+  .visi-misi-section h2 {
+      font-size: 28px;
+  }
+
+  .card-body {
+      padding: 20px;
+  }
 }
-/*Dosen*/
 
+
+
+/* === Section Struktur Organisasi === */
+/* === Section Struktur Organisasi === */
+.struktur-section {
+  background-color: #f4f9f4; /* Latar belakang yang lembut */
+  padding: 60px 20px;
+  color: #2f4f4f; /* Teks dengan warna gelap yang kontras */
+  font-family: 'Georgia', serif;
+}
+
+.struktur-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #2e5e4e;
+  margin-bottom: 30px; /* Menyesuaikan jarak bawah judul */
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #6db37e; /* Garis bawah dengan warna hijau muda */
+  text-align: center; /* Menjaga judul tetap di tengah */
+}
+
+.struktur-section img {
+  width: 100%; /* Agar gambar mengambil lebar penuh dalam wadah */
+  max-width: 800px; /* Maksimal lebar gambar pada desktop */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 8px; /* Membuat sudut gambar lebih lembut */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Menambahkan efek shadow agar gambar lebih menonjol */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi saat hover */
+  margin-top: 20px; /* Memberikan jarak antara judul dan gambar */
+  display: block; /* Menjadikan gambar sebagai elemen block agar bisa diberi margin */
+  margin-left: auto;
+  margin-right: auto; /* Membuat gambar tetap berada di tengah */
+}
+
+.struktur-section img:hover {
+  transform: scale(1.05); /* Efek zoom in saat hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Menambah shadow saat hover */
+}
+
+@media (max-width: 768px) {
+  .struktur-section h2 {
+      font-size: 28px;
+  }
+
+  .struktur-section {
+      padding: 40px 15px;
+  }
+
+  .struktur-section img {
+      width: 100%; /* Gambar tetap lebar penuh di layar kecil */
+      max-width: 100%; /* Tidak ada batasan lebar pada layar kecil */
+  }
+}
+
+/* === Section Dosen === */
 .dosen-section {
-  height: 100vh;
+  background-color: #f8f9fa; /* Latar belakang terang */
+  padding: 60px 20px;
+  color: #2f4f4f; /* Warna teks gelap alami */
 }
 
 .dosen-section h2 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Playfair Display', serif;
   font-size: 36px;
-  color: #333;
+  color: #2e5e4e;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #6db37e; /* Garis bawah dengan warna hijau muda */
 }
 
-.dosen-section table {
-  font-size: 16px;
-}
-
-.dosen-section img {
-  border-radius: 50%; /* Agar gambar jadi bulat */
-}
-
-/* Tambahkan ke file CSS kamu */
-.table-striped tbody tr:nth-child(odd) {
-  background-color: #f2f2f2; /* Warna latar belakang untuk baris ganjil */
-}
-
-.table-striped tbody tr:nth-child(even) {
-  background-color: #ffffff; /* Warna latar belakang untuk baris genap */
-}
-
-.table th, .table td {
-  text-align: center; /* Tengah untuk semua data */
+.table {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  border: none;
 }
 
 .table th {
-  background-color: #343a40; /* Warna background header */
-  color: #fff; /* Warna teks header */
-}
-
-
-/*plp admin*/
-
-.plp-admin-section {
-  height: 100vh;
-}
-.plp-admin-section h2 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 36px;
-  color: #333;
-}
-
-/*AKREDITASI*/
-
-/* Section Akreditasi */
-#akreditasi {
-  height: 100vh;
-  padding: 60px 0;
-  background-color: #f0fdf4; /* hijau muda lembut */
-  color: #333;
-}
-
-#akreditasi h2 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 36px;
-  color: #117A65; /* hijau toska tua */
-  margin-bottom: 30px;
-}
-
-#akreditasi p {
-  font-family: 'Lobster', cursive;
+  background-color: #6db37e; /* Hijau muda */
+  color: #ffffff;
   font-size: 18px;
-  color: #444;
-  line-height: 1.8;
-  text-align: justify;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 15px;
 }
 
-#akreditasi img {
-  max-width: 100%;
-  height: auto;
-  border: 3px solid #117A65;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.table td {
+  text-align: center;
+  padding: 12px 15px;
+  font-size: 16px;
+  color: #333;
 }
+
+.table td img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1; /* Highlight saat hover */
+}
+
+.table td:first-child, .table th:first-child {
+  width: 50px; /* Menentukan ukuran kolom no */
+}
+
+.table td:nth-child(2) {
+  width: 70px; /* Menentukan ukuran kolom foto */
+}
+
+@media (max-width: 768px) {
+  .table th, .table td {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  .dosen-section h2 {
+      font-size: 28px;
+  }
+}
+
+
+
+/* === Section PLP & Admin === */
+.plp-admin-section {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 60px 20px;
+  color: #333;
+  font-family: 'Georgia', serif;
+}
+
+.plp-admin-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #2e5e4e;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #6db37e;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  table-layout: fixed; /* Ensure fixed layout */
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table th {
+  background-color: #6db37e; /* Green background for headers */
+  color: white;
+}
+
+table td {
+  background-color: #fff;
+  overflow: hidden; /* Prevent content overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray for alternating rows */
+}
+
+table tbody tr:hover {
+  background-color: #e0e0e0; /* Light gray hover effect */
+}
+
+table td:nth-child(2) {
+  width: 35%; /* Set a wider column for "Nama" */
+}
+
+@media (max-width: 768px) {
+  .plp-admin-section {
+      padding: 40px 15px;
+  }
+
+  .plp-admin-section h2 {
+      font-size: 28px;
+  }
+
+  table th,
+  table td {
+      padding: 10px;
+  }
+
+  table td:nth-child(2) {
+      width: 45%; /* Adjust "Nama" column width for mobile */
+  }
+}
+
+
+/* === Section Akreditasi === */
+.akreditasi-section {
+  background-color: #f9f9f9; /* Light background */
+  padding: 60px 20px;
+  color: #333;
+}
+
+.akreditasi-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #2e5e4e;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #6db37e; /* Border under title */
+}
+
+.akreditasi-section p.lead {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* === Section Akreditasi === */
+.akreditasi-section .img-fluid {
+  max-width: 70%;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.akreditasi-section .img-fluid:hover {
+  transform: scale(1.05); /* Membesarkan gambar sedikit saat di-hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Menambah bayangan lebih kuat saat di-hover */
+}
+
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .akreditasi-section h2 {
+      font-size: 28px;
+  }
+
+  .akreditasi-section p.lead {
+      font-size: 16px;
+  }
+
+  .akreditasi-section .row {
+      text-align: center;
+  }
+
+  .akreditasi-section .col-md-6 {
+      margin-bottom: 20px;
+  }
+}
+
+
+
 
 
 
@@ -293,7 +581,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  background-color: var(--nav-dropdown-hover-color);
+  background-color: var(--accent-color);
   color: var(--default-color);
   transition: all 0.5s;
   z-index: 997;
@@ -693,8 +981,8 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: var(--nav-dropdown-hover-color);
+  border-color: var(--nav-dropdown-hover-color)
 }
 
 .footer h4 {
@@ -718,7 +1006,7 @@ h6 {
   margin-right: 3px;
   font-size: 12px;
   line-height: 0;
-  color: var(--accent-color);
+  color: var(--nav-dropdown-hover-color)
 }
 
 .footer .footer-links ul li {
@@ -738,7 +1026,7 @@ h6 {
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: var(--nav-dropdown-hover-color);
 }
 
 .footer .footer-about a {
@@ -915,6 +1203,7 @@ section,
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  font-family: 'Playfair Display', serif;
 }
 
 .section-title h2:after {
@@ -928,6 +1217,11 @@ section,
   right: 0;
   bottom: 0;
   margin: auto;
+}
+
+.section-title h3{
+  font-family: 'Georgia', serif;
+
 }
 
 .section-title p {
@@ -1250,6 +1544,70 @@ section,
   margin-bottom: 0;
 }
 
+/* #about h2 {
+  position: relative;
+  display: inline-block;
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+#about h2::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: #28a745; /* warna garis hijau 
+  bottom: -5px;
+  left: 0;
+  border-radius: 2px;
+} */
+
+
+/* About Section Styling */
+#about .service-item {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  background-color: #ecfcec;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#about .img-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50px;
+}
+
+#about h2{
+    font-family: 'Georgia', serif;
+
+}
+
+#about .title {
+  font-family: 'Georgia', serif;
+  font-size: 22px;
+  color: #333;
+  font-weight: normal;
+}
+
+#about .text-muted {
+  color: #6c757d;
+}
+
+/*--------------------------*/
+
+
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -1281,21 +1639,80 @@ section,
   height: 100%;
 }
 
-.berita-section .service-item .title {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;      
-  -webkit-box-orient: vertical;
-  overflow: hidden;  
-  text-overflow: ellipsis; 
+#berita h2 {
+  position: relative;
+  display: inline-block;
+  font-family: 'Georgia', serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
 }
 
-.berita-section .service-item .description {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;      
-  -webkit-box-orient: vertical;
-  overflow: hidden;  
-  text-overflow: ellipsis; 
+#berita h2::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: var(--accent-color);
+  bottom: -5px;
+  left: 0;
+  border-radius: 2px;
 }
+
+#berita .service-item {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+#berita .service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+#berita .img-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#berita .title {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  line-height: 1.3;
+  max-height: 2.6em;
+  overflow: hidden;
+}
+
+#berita .description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+#berita a.text-center {
+  font-weight: bold;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+#berita a.text-center:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+
+
+
+
 
 .output-lulusan-section .output-lulusan-item .item-content .title {
   font-size: 24px !important;
@@ -1352,10 +1769,11 @@ section,
 }
 
 .hero .featured-item:hover h4 a,
-.hero .featured-item:hover .icon i,
-.hero .featured-item:hover p {
+.hero .featured-item:hover .icon i
+/* .hero .featured-item:hover  p */{ 
   color: var(--contrast-color);
 }
+
 
 .hero .featured-item:hover:before {
   background: var(--accent-color);

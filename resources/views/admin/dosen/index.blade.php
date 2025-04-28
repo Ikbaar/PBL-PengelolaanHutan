@@ -37,8 +37,8 @@
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->nip }}</td>
                                 <td>
-                                    <a href="{{ route('admin.dosen.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <form action="{{ route('admin.dosen.destroy', $item->id) }}" method="POST" style="display:inline-block" onsubmit="return confirm('Yakin hapus?')">
+                                    <a href="{{ route('admin.dosen.edit', $item->id) }}" class="btn btn-warning btn-sm d-inline">Edit</a>
+                                    <form action="{{ route('admin.dosen.destroy', $item->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus?')">
                                         @csrf
                                         @method('DELETE')
                                         <button class="btn btn-danger btn-sm">Hapus</button>
