@@ -4,7 +4,7 @@
 <div class="container">
     <h1>Edit Kalender Akademik</h1>
 
-    <form method="POST" action="{{ route('kalender.update', $kalender->id) }}">
+    <form method="POST" action="{{ route('admin.kalender.update', $kalender->id) }}">
         @csrf
         @method('PUT')
         <div class="form-group">

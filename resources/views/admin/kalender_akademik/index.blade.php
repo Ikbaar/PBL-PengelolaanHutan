@@ -6,7 +6,7 @@
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h3>Kalender Akademik</h3>
-                <a href="{{ route('admin.kalenderz.create') }}" class="btn btn-primary">Tambah Event</a>
+                <a href="{{ route('admin.kalender.create') }}" class="btn btn-primary">Tambah Event</a>
             </div>
             <div class="card-body">
                 @if(session('success'))

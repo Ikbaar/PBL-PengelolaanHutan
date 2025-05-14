@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <h2 class="mt-4">Tambah Kalender Akademik</h2>
+    <h2 class="mt-4">Kalender Akademik</h2>
 
     {{-- Notifikasi sukses --}}
     @if(session('success'))

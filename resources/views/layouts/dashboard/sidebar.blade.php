@@ -41,7 +41,7 @@
     </a>
 
     <li class="sidebar-item">
-    <a class="sidebar-link" href="{{ route('kalender.index') }}">
+    <a class="sidebar-link" href="{{ route('admin.kalender.index') }}">
         <span class="sidebar-middle">Kalender Akademik</span>
     </a>
 </li>

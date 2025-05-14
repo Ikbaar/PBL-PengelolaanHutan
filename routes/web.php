@@ -114,10 +114,11 @@ Route::view('/lab-perencanaan', 'labs.perencanaan')->name('lab.perencanaan');
 Route::view('/lab-sosial_ekonomi', 'labs.sosial_ekonomi')->name('lab.sosial_ekonomi');
 
 
-Route::get('admin/kalender', [KalenderController::class, 'index'])->name('kalender.index');
+Route::get('admin/kalender', [KalenderController::class, 'index'])->name('admin.kalender.index');
 Route::get('admin/kalender/create', [KalenderController::class, 'create'])->name('admin.kalender.create');
 Route::post('kalender', [KalenderController::class, 'store'])->name('admin.kalender.store');
 Route::get('kalender/{id}/edit', [KalenderController::class, 'edit'])->name('admin.kalender.edit');
+Route::put('admin/kalender/{id}', [KalenderController::class, 'update'])->name('admin.kalender.update');
 Route::delete('admin/kalender/{id}', [KalenderController::class, 'destroy'])->name('admin.kalender.destroy');
 
 
