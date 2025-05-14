@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\MisiController;
 use App\Http\Controllers\Admin\DosenController;
 use App\Http\Controllers\Admin\PLPController;
 use App\Http\Controllers\Admin\AkreditasiController;
+use App\Http\Controllers\Admin\KalenderController;
 
 
 // Route::get('/', function () {
@@ -105,11 +106,21 @@ Route::put('admin/akreditasi/{id}', [AkreditasiController::class, 'update'])->na
 Route::delete('admin/akreditasi/{id}', [AkreditasiController::class, 'destroy'])->name('admin.akreditasi.destroy');
 
 
-
-
 Route::view('/lab-tanah-air', 'labs.tanah_dan_air')->name('lab.tanah_air');
 Route::view('/lab-konservasi', 'labs.konservasi')->name('lab.konservasi');
 Route::view('/lab-persemaian', 'labs.persemaian')->name('lab.persemaian');
 Route::view('/lab-silfikutur', 'labs.silfikutur')->name('lab.silfikutur');
 Route::view('/lab-perencanaan', 'labs.perencanaan')->name('lab.perencanaan');
 Route::view('/lab-sosial_ekonomi', 'labs.sosial_ekonomi')->name('lab.sosial_ekonomi');
+
+
+Route::get('admin/kalender', [KalenderController::class, 'index'])->name('kalender.index');
+Route::get('admin/kalender/create', [KalenderController::class, 'create'])->name('admin.kalender.create');
+Route::post('kalender', [KalenderController::class, 'store'])->name('admin.kalender.store');
+Route::get('kalender/{id}/edit', [KalenderController::class, 'edit'])->name('admin.kalender.edit');
+Route::delete('admin/kalender/{id}', [KalenderController::class, 'destroy'])->name('admin.kalender.destroy');
+
+
+
+
+

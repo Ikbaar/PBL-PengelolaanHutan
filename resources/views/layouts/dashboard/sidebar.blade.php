@@ -39,6 +39,12 @@
     <a class="sidebar-link" href="{{ route('admin.akreditasi.index') }}">
         <i class="align-middle" data-feather="papers"></i> <span class="align-middle">Akreditasi</span>
     </a>
+
+    <li class="sidebar-item">
+    <a class="sidebar-link" href="{{ route('kalender.index') }}">
+        <span class="sidebar-middle">Kalender Akademik</span>
+    </a>
+</li>
 </li>
 
 

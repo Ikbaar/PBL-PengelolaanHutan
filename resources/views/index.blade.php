@@ -24,7 +24,7 @@
       </div><!-- End Carousel Item -->
 
       <div class="carousel-item">
-      <img src="assets/img/Slide3.jpg" alt="">
+      <img src="assets/img/Slide3.png" alt="">
         <div class="carousel-container">
           {{-- <h2>Politeknik Pertanian Negeri Samarinda</h2>
           {{-- <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p> --}}
