@@ -114,6 +114,7 @@ Route::view('/lab-perencanaan', 'labs.perencanaan')->name('lab.perencanaan');
 Route::view('/lab-sosial_ekonomi', 'labs.sosial_ekonomi')->name('lab.sosial_ekonomi');
 
 
+//route kalender akademik
 Route::get('admin/kalender', [KalenderController::class, 'index'])->name('admin.kalender.index');
 Route::get('admin/kalender/create', [KalenderController::class, 'create'])->name('admin.kalender.create');
 Route::post('kalender', [KalenderController::class, 'store'])->name('admin.kalender.store');

@@ -74,4 +74,4 @@ class KalenderController extends Controller
         return redirect()->route('admin.kalender.index')->with('success', 'Data kalender berhasil ditambahkan.');
     }
 }
-//controller kalende
+//controller kalender
