@@ -4,7 +4,6 @@
 <section class="lab-section">
   <h2 class="lab-title">Laboratorium Program Studi</h2>
 
-  <!-- ❗ Hanya satu .lab-row -->
   <div class="lab-row">
 
     <!-- Card 1 -->
@@ -34,7 +33,6 @@
 
 <section class="lab-section">
 
-  <!-- ❗ Hanya satu .lab-row -->
   <div class="lab-row">
 
     <!-- Card 1 -->
