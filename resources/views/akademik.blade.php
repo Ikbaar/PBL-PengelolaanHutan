@@ -36,7 +36,7 @@
                 </tbody>
             </table>
         @else
-            <p class="text-center">Belum ada data kalender akademik.</p>
+            <p class="text-center">Belum ada data kalender Akademik.</p>
         @endif
     </div>
 </section>

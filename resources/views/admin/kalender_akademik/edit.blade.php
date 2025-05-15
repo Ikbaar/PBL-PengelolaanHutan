@@ -19,7 +19,7 @@
             <label for="deskripsi">Deskripsi</label>
             <textarea class="form-control" name="deskripsi">{{ $kalender->deskripsi }}</textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit" class="btn btn-primary">UPDATe</button>
     </form>
 </div>
 @endsection
