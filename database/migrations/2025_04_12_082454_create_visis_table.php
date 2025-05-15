@@ -10,17 +10,19 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up()
-{
-    Schema::table('visis', function (Blueprint $table) {
-        $table->text('konten');
-    });
-}
+    {
+        Schema::create('visis', function (Blueprint $table) {
+            $table->id(); // Kolom ID
+            $table->text('konten')->nullable(); // Kolom konten
+            $table->timestamps(); // Kolom created_at dan updated_at
+        });
+    }
 
-public function down()
-{
-    Schema::table('visis', function (Blueprint $table) {
-        $table->dropColumn('konten');
-    });
-}
-
+    /**
+     * Reverse the migrations.
+     */
+    public function down()
+    {
+        Schema::dropIfExists('visis');
+    }
 };

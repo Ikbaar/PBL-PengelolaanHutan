@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\MisiController;
 use App\Http\Controllers\Admin\DosenController;
 use App\Http\Controllers\Admin\PLPController;
 use App\Http\Controllers\Admin\AkreditasiController;
+use App\Http\Controllers\Admin\KalenderController;
 
 
 // Route::get('/fasilitas', function () {
