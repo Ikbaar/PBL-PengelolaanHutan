@@ -24,6 +24,6 @@
             <label for="deskripsi">Deskripsi</label>
             <textarea class="form-control" name="deskripsi" id="deskripsi"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">SIMPAN</button>
+        <button type="submit" class="btn btn-primary">SIMPAn</button>
     </form>
 @endsection
