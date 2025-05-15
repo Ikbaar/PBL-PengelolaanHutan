@@ -11,4 +11,4 @@ class Kalender extends Model
 
     protected $fillable = ['nama_event', 'tanggal', 'deskripsi'];
 }
-//model kalender
+//model kalende
