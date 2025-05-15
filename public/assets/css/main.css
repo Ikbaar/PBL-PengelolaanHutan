@@ -271,11 +271,6 @@
 }
 
 /* === Section Dosen === */
-.dosen-section {
-  background-color: #f8f9fa; /* Latar belakang terang */
-  padding: 60px 20px;
-  color: #2f4f4f; /* Warna teks gelap alami */
-}
 
 .dosen-section h2 {
   font-family: 'Playfair Display', serif;
@@ -285,65 +280,80 @@
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
-  border-bottom: 2px solid #6db37e; /* Garis bawah dengan warna hijau muda */
+  border-bottom: 2px solid #6db37e;
 }
 
-.table {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
-  border: none;
-}
-
-.table th {
-  background-color: #6db37e; /* Hijau muda */
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  padding: 12px 15px;
-}
-
-.table td {
-  text-align: center;
-  padding: 12px 15px;
-  font-size: 16px;
-  color: #333;
-}
-
-.table td img {
+.dosen-card {
+  width: 160px; /* dulunya 120px */
+  height: 160px;
   border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.dosen-photo {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: block;
 }
 
-.table tbody tr {
-  transition: background-color 0.3s ease;
+.dosen-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4); /* 40% dark overlay */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+  text-align: center;
 }
 
-.table tbody tr:hover {
-  background-color: #f1f1f1; /* Highlight saat hover */
+.dosen-info h5 {
+  font-size: 14px; /* Kecilkan ukuran nama */
+  margin-bottom: 4px;
+  color: white;
 }
 
-.table td:first-child, .table th:first-child {
-  width: 50px; /* Menentukan ukuran kolom no */
+.dosen-info p {
+  font-size: 12px; /* Kecilkan ukuran NIP */
+  margin: 0;
+  color: white;
 }
 
-.table td:nth-child(2) {
-  width: 70px; /* Menentukan ukuran kolom foto */
+.dosen-card:hover .dosen-info {
+  opacity: 1;
 }
 
-@media (max-width: 768px) {
-  .table th, .table td {
-      font-size: 14px;
-      padding: 8px;
+@media (max-width: 576px) {
+  .dosen-card {
+    width: 120px;
+    height: 120px;
   }
 
-  .dosen-section h2 {
-      font-size: 28px;
+  .dosen-info h5 {
+    font-size: 13px;
+  }
+
+  .dosen-info p {
+    font-size: 11px;
   }
 }
-
+/* Untuk tampilan aktif (tap) */
+.dosen-card.active .dosen-info {
+  opacity: 1;
+}
 
 
 /* === Section PLP & Admin === */
@@ -485,6 +495,147 @@ table td:nth-child(2) {
   }
 }
 
+
+/*--------Fasilitas---------*/
+
+.lab-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #2e5e4e;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #6db37e; /* Border under title */
+}
+
+.lab-section {
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+.lab-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.lab-row {
+  display: flex;
+  gap: 20px;
+  height: 80vh;
+
+  justify-content: center; /* Biar card berjajar di tengah */
+  margin: 0 auto;          /* Biar container-nya juga di tengah */
+  max-width: 100%;         /* Optional, biar container gak melebar */
+  overflow-x: auto;        /* Kalau card-nya banyak, bisa scroll horizontal */
+}
+
+
+
+.card {
+  width: 80px;
+  height: 90%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 0.4s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.card.open {
+  width: 500px;
+}
+
+.card-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 1rem;
+  background-color: var(--accent-color);
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card.open .card-label {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-content .card-title {
+  display: none;
+}
+
+.card.open .card-content .card-title {
+  display: block;
+}
+
+.card-content {
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.2s;
+  overflow-y: auto;
+  flex: 1;
+  display: none;
+  flex-direction: column;
+}
+
+.card.open .card-content {
+  display: flex;
+  opacity: 1;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.card-content img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Optional responsive fallback */
+@media (max-width: 768px) {
+  .lab-row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card,
+  .card.open {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-label {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+
+  .card-content {
+    display: block;
+    opacity: 1;
+  }
+}
 
 
 

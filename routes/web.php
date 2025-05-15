@@ -16,8 +16,8 @@ use App\Http\Controllers\Admin\PLPController;
 use App\Http\Controllers\Admin\AkreditasiController;
 
 
-// Route::get('/', function () {
-//     return view('welcome');
+// Route::get('/fasilitas', function () {
+//     return view('fasilitas');
 // });
 
 Route::get('/',[IndexController::class, 'index'])->name('index');
@@ -105,11 +105,4 @@ Route::put('admin/akreditasi/{id}', [AkreditasiController::class, 'update'])->na
 Route::delete('admin/akreditasi/{id}', [AkreditasiController::class, 'destroy'])->name('admin.akreditasi.destroy');
 
 
-
-
-Route::view('/lab-tanah-air', 'labs.tanah_dan_air')->name('lab.tanah_air');
-Route::view('/lab-konservasi', 'labs.konservasi')->name('lab.konservasi');
-Route::view('/lab-persemaian', 'labs.persemaian')->name('lab.persemaian');
-Route::view('/lab-silfikutur', 'labs.silfikutur')->name('lab.silfikutur');
-Route::view('/lab-perencanaan', 'labs.perencanaan')->name('lab.perencanaan');
-Route::view('/lab-sosial_ekonomi', 'labs.sosial_ekonomi')->name('lab.sosial_ekonomi');
+Route::view('/fasilitas', 'fasilitas')->name('fasilitas');
