@@ -15,6 +15,9 @@ use App\Http\Controllers\Admin\DosenController;
 use App\Http\Controllers\Admin\PLPController;
 use App\Http\Controllers\Admin\AkreditasiController;
 use App\Http\Controllers\Admin\KalenderController;
+use App\Http\Controllers\Admin\JadwalController;
+use App\Http\Controllers\Admin\MapLocationController;
+
 
 
 // Route::get('/', function () {
@@ -106,6 +109,7 @@ Route::put('admin/akreditasi/{id}', [AkreditasiController::class, 'update'])->na
 Route::delete('admin/akreditasi/{id}', [AkreditasiController::class, 'destroy'])->name('admin.akreditasi.destroy');
 
 
+Route::get('/fasilitas', [IndexController::class, 'fasilitas'])->name('fasilitas');
 Route::view('/lab-tanah-air', 'labs.tanah_dan_air')->name('lab.tanah_air');
 Route::view('/lab-konservasi', 'labs.konservasi')->name('lab.konservasi');
 Route::view('/lab-persemaian', 'labs.persemaian')->name('lab.persemaian');
@@ -114,13 +118,35 @@ Route::view('/lab-perencanaan', 'labs.perencanaan')->name('lab.perencanaan');
 Route::view('/lab-sosial_ekonomi', 'labs.sosial_ekonomi')->name('lab.sosial_ekonomi');
 
 
-//routekalenderakademik
+
+//route kalender akademik
 Route::get('admin/kalender', [KalenderController::class, 'index'])->name('admin.kalender.index');
 Route::get('admin/kalender/create', [KalenderController::class, 'create'])->name('admin.kalender.create');
 Route::post('kalender', [KalenderController::class, 'store'])->name('admin.kalender.store');
 Route::get('kalender/{id}/edit', [KalenderController::class, 'edit'])->name('admin.kalender.edit');
 Route::put('admin/kalender/{id}', [KalenderController::class, 'update'])->name('admin.kalender.update');
 Route::delete('admin/kalender/{id}', [KalenderController::class, 'destroy'])->name('admin.kalender.destroy');
+
+//ini jadwal untuk tampilan front
+Route::get('/jadwal-kuliah', function () {
+    return view('jadwal'); // jadwal.blade.php
+})->name('jadwal-kuliah');
+
+// Untuk download file
+Route::get('/download-jadwal', function () {
+    $path = public_path('files/jadwal-kuliah-genap-2025.pdf');
+    return response()->download($path, 'Jadwal-Kuliah-Genap-2025.pdf');
+});
+
+//ini route jadwal yang bagian crud
+Route::get('admin/jadwal', [JadwalController::class, 'index'])->name('admin.jadwal.index'); // tampil daftar file
+Route::get('admin/jadwal/create', [JadwalController::class, 'create'])->name('admin.jadwal.create'); // form upload
+Route::post('admin/jadwal', [JadwalController::class, 'store'])->name('admin.jadwal.store'); // proses upload
+Route::delete('admin/jadwal/{filename}', [JadwalController::class, 'destroy'])->name('admin.jadwal.destroy'); // hapus file
+
+Route::get('/map', [MapLocationController::class, 'index'])->name('map');
+
+
 
 
 

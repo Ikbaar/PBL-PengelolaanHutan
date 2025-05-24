@@ -32,15 +32,13 @@
                 <li><a href="{{ route('staff') }}#plp-admin">PLP & Admin</a></li>
                 <li><a href="{{ route('akreditasi') }}">Akreditasi</a></li>
                 <li><a href="{{ route('fasilitas') }}">Fasilitas</a></li>
-
-                
               </ul>
             </li>
             <li class="dropdown"><a href="#"><span>Akademik</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="#">Kalender Akademik</a></li>
                 <li><a href="#">Kurikulum</a></li>
-                <li><a href="#">Jadwal Kuliah</a></li>
+                <li><a href="{{ route('jadwal-kuliah') }}">Jadwal Kuliah</a></li>
                 <li><a href="#">Informasi Beasiswa</a></li>
                 <li><a href="{{ route('output-lulusan.index') }}">Output Lulusan</a></li>
               </ul>
@@ -51,6 +49,7 @@
                   <li><a href="#">-</a></li>
                 </ul>
             <li><a href="{{ route('berita-lainnya') }}">Berita</a></li>
+            <<li><a href="{{ route('map') }}">MAP</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
