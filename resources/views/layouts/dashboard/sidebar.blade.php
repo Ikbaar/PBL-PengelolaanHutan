@@ -44,6 +44,11 @@
     <a class="sidebar-link" href="{{ route('admin.kalender.index') }}">
         <span class="sidebar-middle">Kalender Akademik</span>
     </a>
+
+    <li class="sidebar-item">
+    <a class="sidebar-link" href="{{ route('admin.jadwal.index') }}">
+        <span class="sidebar-middle">Jadwal Kuliah</span>
+    </a>
 </li>
 </li>
 
