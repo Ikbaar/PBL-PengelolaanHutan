@@ -7,20 +7,20 @@
   <div class="lab-row">
 
     <!-- Card 1 -->
-    <div class="card" onclick="toggleCard(this)">
-      <div class="card-label">LABORATORIUM TANAH DAN AIR</div>
-      <div class="card-content">
-        <h3 class="card-title">Laboratorium Tanah dan Air</h3>
+    <div class="cards" onclick="toggleCard(this)">
+      <div class="cards-label">LABORATORIUM TANAH DAN AIR</div>
+      <div class="cards-content">
+        <h3 class="cards-title">Laboratorium Tanah dan Air</h3>
         <img src="assets/img/Lab-TanahAir.jpg" alt="Lab TanahAir" />
         <p>Detail lab...</p>
       </div>
     </div>
 
-    <!-- Card 2 -->
-    <div class="card" onclick="toggleCard(this)">
-      <div class="card-label">LABORATORIUM EKSPERIMEN HUTAN</div>
-      <div class="card-content">
-        <h3 class="card-title">Laboratorium Eksperimen Hutan</h3>
+    <!-- cards 2 -->
+    <div class="cards" onclick="toggleCard(this)">
+      <div class="cards-label">LABORATORIUM EKSPERIMEN HUTAN</div>
+      <div class="cards-content">
+        <h3 class="cards-title">Laboratorium Eksperimen Hutan</h3>
         <img src="assets/img/Lab-Hutan.jpg" alt="Lab Hutan" />
         <p>Detail lab...</p>
       </div>
@@ -29,27 +29,25 @@
     <!-- Tambahkan card lain di sini, JANGAN buat div.lab-row baru -->
     
   </div>
-</section>
 
-<section class="lab-section">
 
   <div class="lab-row">
 
     <!-- Card 1 -->
-    <div class="card" onclick="toggleCard(this)">
-      <div class="card-label">LABORATORIUM TANAH DAN AIR</div>
-      <div class="card-content">
-        <h3 class="card-title">Laboratorium Tanah dan Air</h3>
+    <div class="cards" onclick="toggleCard(this)">
+      <div class="cards-label">LABORATORIUM TANAH DAN AIR</div>
+      <div class="cards-content">
+        <h3 class="cards-title">Laboratorium Tanah dan Air</h3>
         <img src="assets/img/Lab-TanahAir.jpg" alt="Lab TanahAir" />
         <p>Detail lab...</p>
       </div>
     </div>
 
     <!-- Card 2 -->
-    <div class="card" onclick="toggleCard(this)">
-      <div class="card-label">LABORATORIUM EKSPERIMEN HUTAN</div>
-      <div class="card-content">
-        <h3 class="card-title">Laboratorium Eksperimen Hutan</h3>
+    <div class="cards" onclick="toggleCard(this)">
+      <div class="cards-label">LABORATORIUM EKSPERIMEN HUTAN</div>
+      <div class="cards-content">
+        <h3 class="cards-title">Laboratorium Eksperimen Hutan</h3>
         <img src="assets/img/Lab-Hutan.jpg" alt="Lab Hutan" />
         <p>Detail lab...</p>
       </div>
@@ -62,11 +60,11 @@
 
 
 <script>
-  function toggleCard(card) {
-    document.querySelectorAll('.card').forEach(c => {
-      if (c !== card) c.classList.remove('open');
+  function toggleCard(cards) {
+    document.querySelectorAll('.cards').forEach(c => {
+      if (c !== cards) c.classList.remove('open');
     });
-    card.classList.toggle('open');
+    cards.classList.toggle('open');
   }
 
   let currentlyOpenCard = null;

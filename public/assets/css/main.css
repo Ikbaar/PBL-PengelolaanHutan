@@ -61,199 +61,251 @@
 /* === Section Sejarah === */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap');
 
-.sejarah {
-  padding: 100px 0;
-  background: linear-gradient(180deg, #f9f9f6 0%, #ffffff 100%);
-  color: #2d2d2d;
-  font-family: 'Inter', sans-serif;
+
+
+
+.sejarah-section {
+    background: #f8f9fa;
 }
 
-.section-subtitle {
-  text-align: center;
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #5c7f67;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  font-weight: 500;
+.sejarah-section h2 {
+font-family: 'Cormorant Garamond', 'DM Serif Display';
+font-size: 2.5rem;
+color: var(--accent-color)
+
 }
 
-.sejarah h2 {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  color: #1e3d29;
-  margin-bottom: 20px;
-}
-
-.section-intro {
-  max-width: 680px;
-  margin: 0 auto 60px;
-  font-size: 17px;
-  line-height: 1.7;
-  text-align: center;
-  color: #555;
-}
-
-.sejarah-item {
-  margin-bottom: 40px;
-}
-
-.sejarah-item-content {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 4px solid #5c7f67;
-  position: relative;
-  overflow: hidden;
-}
-
-.sejarah-item-content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(92, 127, 103, 0.05);
-  transition: left 0.4s ease;
-  z-index: 0;
-}
-
-.sejarah-item-content:hover::before {
-  left: 0;
-}
-
-.sejarah-item-content:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+h2, .section-subtitle {
+    font-family: 'Playfair Display', serif;
 }
 
 .sejarah-item-content p {
-  font-size: 16px;
-  color: #2f2f2f;
-  line-height: 1.8;
-  position: relative;
-  z-index: 1;
+    font-family: 'Inter', sans-serif;
 }
+ 
+
+.section-subtitle {
+    font-size: 1.5rem;
+    color: #6c757d;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.sejarah-item {
+    background: #ffffff;
+    border-left: 5px solid var(--accent-color);
+    padding: 2rem;
+    position: relative;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.sejarah-item:hover {
+    transform: scale(1.05);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  border-bottom: 4px solid var(--accent-color); /* aksen warna hijau */
+    border-top: 4px solid var(--accent-color); /* aksen warna hijau */
+      border-right: 4px solid var(--accent-color); /* aksen warna hijau */
+
+
+  background-color: #f0f7f5;
+}
+
+.badge-year {
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 10;
+    background-color: var(--accent-color);
+}
+
+.sejarah-item-content p {
+  font-family: 'Source Sans Pro', 'Work Sans';
+    font-size: 1.05rem;
+    color: #495057;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+.section-intro{
+  font-family: 'Source Sans Pro', 'Work Sans';
+}
+
+@media (max-width: 768px) {
+    .sejarah-item {
+        padding: 1.5rem;
+    }
+    .badge-year {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
 
 
 
 
 /* === Section Visi & Misi === */
 .visi-misi-section {
-  background-color: #f4f9f4; /* Warna latar belakang yang lembut dan natural */
-  padding: 60px 20px;
-  color: #2f4f4f; /* Teks gelap yang tetap elegan */
-  font-family: 'Georgia', serif;
+  background-color: #f7f9fc;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .visi-misi-section h2 {
-  font-family: 'Playfair Display', serif;
+font-family: 'Playfair Display', serif;
   font-size: 36px;
   color: #2e5e4e;
-  margin-bottom: 40px;
+  margin-bottom: 30px; /* Menyesuaikan jarak bawah judul */
   position: relative;
-  display: inline-block;
   padding-bottom: 10px;
-  border-bottom: 2px solid #6db37e; /* Garis bawah dengan warna hijau muda */
+  text-align: center;
 }
 
-.card-body {
-  border-radius: 10px; /* Membuat sudut lebih lembut */
-  border: none; /* Menghilangkan border standar card */
-  transition: transform 0.3s ease;
+.visi-misi-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #007b5e;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.card {
+  border: none;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-4px); /* Efek hover untuk card */
+  transform: scale(1.05);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  border-bottom: 4px solid #007b5e; /* aksen warna hijau */
+  background-color: #f0f7f5; /* warna sangat soft untuk hover */
 }
 
+/* Optional: subtle glow effect */
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #007b5e, transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+
 .card-body {
-  padding: 30px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
 }
 
 .card-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2e5e4e;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #007b5e;
+  margin-bottom: 1rem;
 }
 
 .card-text {
-  font-size: 16px;
+  font-size: 1rem;
+  color: #333;
   line-height: 1.6;
-  color: #444;
 }
 
-.card-text ul {
-  list-style-type: none;
-  padding-left: 0;
+.card-text li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  position: relative;
 }
 
-.card-text ul li {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.7;
+.card-text li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #007b5e;
+  font-size: 0.9rem;
+  top: 1px;
 }
 
-@media (max-width: 768px) {
-  .visi-misi-section {
-      padding: 40px 15px;
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
 
-  .visi-misi-section h2 {
-      font-size: 28px;
-  }
-
-  .card-body {
-      padding: 20px;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+.visi-misi-section .card {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.visi-misi-section .col-md-6:nth-child(1) .card {
+  animation-delay: 0.2s;
+}
+
+.visi-misi-section .col-md-6:nth-child(2) .card {
+  animation-delay: 0.4s;
+}
 
 
 /* === Section Struktur Organisasi === */
 /* === Section Struktur Organisasi === */
 .struktur-section {
-  background-color: #f4f9f4; /* Latar belakang yang lembut */
+  background-color: #f4f9f4;
   padding: 60px 20px;
-  color: #2f4f4f; /* Teks dengan warna gelap yang kontras */
+  color: #2f4f4f;
   font-family: 'Georgia', serif;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
 }
 
 .struktur-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
   color: #2e5e4e;
-  margin-bottom: 30px; /* Menyesuaikan jarak bawah judul */
-  position: relative;
-  display: inline-block;
+  margin-bottom: 30px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #6db37e; /* Garis bawah dengan warna hijau muda */
-  text-align: center; /* Menjaga judul tetap di tengah */
+  border-bottom: 2px solid #6db37e;
+  display: inline-block;
 }
 
 .struktur-section img {
-  width: 100%; /* Agar gambar mengambil lebar penuh dalam wadah */
-  max-width: 800px; /* Maksimal lebar gambar pada desktop */
-  height: auto; /* Menjaga proporsi gambar */
-  border-radius: 8px; /* Membuat sudut gambar lebih lembut */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Menambahkan efek shadow agar gambar lebih menonjol */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi saat hover */
-  margin-top: 20px; /* Memberikan jarak antara judul dan gambar */
-  display: block; /* Menjadikan gambar sebagai elemen block agar bisa diberi margin */
-  margin-left: auto;
-  margin-right: auto; /* Membuat gambar tetap berada di tengah */
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px auto 40px;
+  border: 1px solid #a8d5a3; /* border hijau lembut */
+  display: block;
 }
 
 .struktur-section img:hover {
-  transform: scale(1.05); /* Efek zoom in saat hover */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Menambah shadow saat hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
+
 
 @media (max-width: 768px) {
   .struktur-section h2 {
@@ -501,12 +553,20 @@ table td:nth-child(2) {
 .lab-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
-  color: #2e5e4e;
+  color: var(--accent-color);
   margin-bottom: 20px;
   position: relative;
-  display: inline-block;
   padding-bottom: 10px;
-  border-bottom: 2px solid #6db37e; /* Border under title */
+}
+
+.lab-section h2::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 3px;
+  background-color: var(--nav-dropdown-hover-color);
+  margin: 1rem auto 0;
+  border-radius: 2px;
 }
 
 .lab-section {
@@ -533,7 +593,7 @@ table td:nth-child(2) {
 
 
 
-.card {
+.cards {
   width: 80px;
   height: 90%;
   background: white;
@@ -547,11 +607,11 @@ table td:nth-child(2) {
   align-items: stretch;
 }
 
-.card.open {
+.cards.open {
   width: 500px;
 }
 
-.card-label {
+.cards-label {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   transform: rotate(180deg);
@@ -567,20 +627,20 @@ table td:nth-child(2) {
   flex-shrink: 0;
 }
 
-.card.open .card-label {
+.cards.open .cards-label {
   opacity: 0;
   pointer-events: none;
 }
 
-.card-content .card-title {
+.cards-content .cards-title {
   display: none;
 }
 
-.card.open .card-content .card-title {
+.cards.open .cards-content .cards-title {
   display: block;
 }
 
-.card-content {
+.cards-content {
   padding: 1.5rem;
   opacity: 0;
   transition: opacity 0.3s ease 0.2s;
@@ -590,17 +650,17 @@ table td:nth-child(2) {
   flex-direction: column;
 }
 
-.card.open .card-content {
+.cards.open .cards-content {
   display: flex;
   opacity: 1;
 }
 
-.card-content h3 {
+.cards-content h3 {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-.card-content img {
+.cards-content img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -608,7 +668,7 @@ table td:nth-child(2) {
   margin-bottom: 1rem;
 }
 
-.card-content p {
+.cards-content p {
   font-size: 0.95rem;
   color: #333;
 }
@@ -620,22 +680,152 @@ table td:nth-child(2) {
     height: auto;
   }
 
-  .card,
-  .card.open {
+  .cards,
+  .cards.open {
     width: 100%;
     height: auto;
   }
 
-  .card-label {
+  .cards-label {
     writing-mode: horizontal-tb;
     transform: none;
   }
 
-  .card-content {
+  .cards-content {
     display: block;
     opacity: 1;
   }
 }
+
+/*-----Beasiswa------*/
+
+.beasiswa-section {
+  background-color: #fafafa;
+  color: #2d2d2d;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 50px 0;
+}
+
+.beasiswa-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #2e5e4e;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #6db37e;
+}
+
+.beasiswa-section .card {
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: default;
+}
+
+.beasiswa-section .card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+
+.beasiswa-section .card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2e3b2f;
+  margin-bottom: 0.7rem;
+}
+
+.beasiswa-section .card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #4a4a4a;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.beasiswa-section .text-muted small {
+  font-style: italic;
+  color: #7a7a7a;
+  margin-bottom: 1.3rem;
+  display: block;
+}
+
+.beasiswa-section .btn-primary {
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  box-shadow: 0 2px 8px rgba(122, 138, 100, 0.4);
+  text-transform: capitalize;
+}
+
+.beasiswa-section .btn-primary:hover {
+  background-color: var(--nav-dropdown-hover-color);
+  box-shadow: 0 4px 14px rgba(95, 109, 77, 0.6);
+}
+
+
+/*Detail Beasiswa*/
+
+.beasiswa-detail-section {
+  background-color: #fafafa;
+  color: #2c3e50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 80vh;
+}
+
+.beasiswa-detail-section .detail-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #2e5e4e;
+  border-bottom: 3px solid #6db37e;
+  padding-bottom: 8px;
+  max-width: 600px;
+}
+
+.beasiswa-detail-section .detail-date {
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+.beasiswa-detail-section .detail-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  max-width: 700px;
+  margin-top: 1.5rem;
+  white-space: pre-line;
+}
+
+.btn-outline-secondary {
+  color: #2e5e4e;
+  border-color: var(--accent-color);
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: #6db37e;
+}
+
 
 
 

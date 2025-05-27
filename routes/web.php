@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\AkreditasiController;
 use App\Http\Controllers\Admin\KalenderController;
 use App\Http\Controllers\Admin\JadwalController;
 use App\Http\Controllers\Admin\MapLocationController;
+use App\Http\Controllers\Admin\BeasiswaController;
 
 
 
@@ -145,7 +146,21 @@ Route::get('admin/jadwal/create', [JadwalController::class, 'create'])->name('ad
 Route::post('admin/jadwal', [JadwalController::class, 'store'])->name('admin.jadwal.store'); // proses upload
 Route::delete('admin/jadwal/{filename}', [JadwalController::class, 'destroy'])->name('admin.jadwal.destroy'); // hapus file
 
-Route::get('/map', [MapLocationController::class, 'index'])->name('map');
+// Route::get('/map', [MapLocationController::class, 'index'])->name('map');//
+
+Route::view('/map', 'map')->name('map');
+
+
+
+Route::get('/beasiswa', [BeasiswaController::class, 'indexPublic'])->name('beasiswa');
+Route::get('admin/beasiswa', [BeasiswaController::class, 'index'])->name('admin.beasiswa.index');
+Route::get('admin/beasiswa/create', [BeasiswaController::class, 'create'])->name('admin.beasiswa.create');
+Route::post('admin/beasiswa', [BeasiswaController::class, 'store'])->name('admin.beasiswa.store');
+Route::get('admin/beasiswa/{id}/edit', [BeasiswaController::class, 'edit'])->name('admin.beasiswa.edit');
+Route::put('admin/beasiswa/{id}', [BeasiswaController::class, 'update'])->name('admin.beasiswa.update');
+Route::delete('admin/beasiswa/{id}', [BeasiswaController::class, 'destroy'])->name('admin.beasiswa.destroy');
+Route::get('/beasiswa/{id}', [BeasiswaController::class, 'show'])->name('show');
+
 
 
 

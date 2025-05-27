@@ -1,18 +1,21 @@
 @extends('layouts.landing.index')
 @section('content')
-<section id="sejarah" class="sejarah">
+<section id="sejarah" class="sejarah-section py-5">
     <div class="container">
         <p class="section-subtitle text-center">Perjalanan Kami</p>
-        <h2 class="text-center mb-3">Sejarah</h2>
+        <h2 class="text-center mb-4">Sejarah</h2>
         <p class="section-intro text-center mb-5">
             Mengenal lebih jauh tentang perjalanan dan perkembangan Prodi Pengelolaan Hutan dari masa ke masa.
         </p>
 
         @if ($sejarah->isNotEmpty())
             @foreach ($sejarah as $item)
-                <div class="sejarah-item">
-                    <div class="sejarah-item-content">
-                        <p>{!! $item->konten !!}</p>
+                <div class="sejarah-item p-4 mb-4 shadow-sm bg-white rounded-4 position-relative">
+                    <div class="badge-year text-white px-3 py-1 rounded-pill position-absolute top-0 start-50 translate-middle">
+                        {{ \Carbon\Carbon::parse($item->created_at)->format('Y') }}
+                    </div>
+                    <div class="sejarah-item-content mt-4">
+                        <p class="fs-5 lh-lg text-secondary">{!! $item->konten !!}</p>
                     </div>
                 </div>
             @endforeach
@@ -21,6 +24,7 @@
         @endif
     </div>
 </section>
+
 
 
 <section id="visi-misi" class="visi-misi-section py-5">
