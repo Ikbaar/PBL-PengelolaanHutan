@@ -20,8 +20,8 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #545454; /* Color for headings, subheadings and title throughout the website */
+  --default-color: #000000; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #006400; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #8a8a8a; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -825,6 +825,95 @@ table td:nth-child(2) {
   color: white;
   border-color: #6db37e;
 }
+
+.dokumen {
+    background-color: #f8f9fa;
+}
+
+.dokumen h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #2e5e4e;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #6db37e;
+}
+
+.dokumen .text-muted {
+    font-size: 1rem;
+    color: #6c757d;
+    font-family: 'Playfair Display', serif;
+}
+
+.dokumen .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dokumen .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.dokumen .card-text {
+    font-size: 1rem;
+    color: #6c757d;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.dokumen .card-text {
+    font-size: 1rem;
+    color: #6c757d;
+    font-family: 'Playfair Display', serif;
+}
+
+.dokumen .btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+
+}
+
+.dokumen .btn:hover {
+    background-color: #264f42;
+    color: #fff;
+}
+
+.detail-dokumen {
+    background-color: #f9fafb;
+    font-family: 'Inter', sans-serif;
+}
+
+.detail-dokumen iframe {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+}
+
+.detail-dokumen .download-btn {
+    background-color: #2e5e4e;
+    color: white;
+    padding: 10px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.detail-dokumen .download-btn:hover {
+    background-color: #264c3f;
+    color: #fff;
+}
+
 
 
 
@@ -1759,7 +1848,7 @@ section,
 }
 
 .hero .featured-item {
-  background-color: var(--surface-color);
+  background-color: var(--nav-color);
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   padding: 40px 30px;
   transition: all 0.3s ease-in-out;
@@ -1772,7 +1861,7 @@ section,
 .hero .featured-item:before {
   content: "";
   position: absolute;
-  background: var(--accent-color);
+  background: var(--contrast-color);
   inset: 100% 0 0 0;
   transition: all 0.3s;
   z-index: -1;
@@ -1804,6 +1893,7 @@ section,
   font-size: 14px;
   margin-bottom: 0;
   transition: ease-in-out 0.3s;
+
 }
 
 .hero .featured-item:hover h4 a,

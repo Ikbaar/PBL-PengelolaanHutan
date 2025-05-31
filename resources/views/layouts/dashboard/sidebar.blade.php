@@ -29,16 +29,12 @@
 </li>
 
 <li class="sidebar-header">AKADEMIK</li>
-<li class="sidebar-item {{ request()->routeIs('admin.kalender.*') ? 'active' : '' }}">
-    <a class="sidebar-link" href="{{ route('admin.kalender.index') }}">
-        <i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Kalender Akademik</span>
+<li class="sidebar-item {{ request()->routeIs('admin.dokumen.*') ? 'active' : '' }}">
+    <a class="sidebar-link" href="{{ route('admin.dokumen.index') }}">
+        <i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Dokumen</span>
     </a>
 </li>
-<li class="sidebar-item {{ request()->routeIs('admin.jadwal.*') ? 'active' : '' }}">
-    <a class="sidebar-link" href="{{ route('admin.jadwal.index') }}">
-        <i class="align-middle" data-feather="clock"></i> <span class="align-middle">Jadwal Kuliah</span>
-    </a>
-</li>
+
 <li class="sidebar-item {{ request()->routeIs('admin.output-lulusan.*') ? 'active' : '' }}">
     <a class="sidebar-link" href="{{ route('admin.output-lulusan.index') }}">
         <i class="align-middle" data-feather="user-check"></i> <span class="align-middle">Output Lulusan</span>

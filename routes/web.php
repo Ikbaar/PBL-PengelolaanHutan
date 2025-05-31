@@ -14,10 +14,9 @@ use App\Http\Controllers\Admin\MisiController;
 use App\Http\Controllers\Admin\DosenController;
 use App\Http\Controllers\Admin\PLPController;
 use App\Http\Controllers\Admin\AkreditasiController;
-use App\Http\Controllers\Admin\KalenderController;
-use App\Http\Controllers\Admin\JadwalController;
 use App\Http\Controllers\Admin\MapLocationController;
 use App\Http\Controllers\Admin\BeasiswaController;
+use App\Http\Controllers\Admin\DokumenController;
 
 
 
@@ -121,32 +120,18 @@ Route::view('/lab-sosial_ekonomi', 'labs.sosial_ekonomi')->name('lab.sosial_ekon
 Route::view('/fasilitas', 'fasilitas')->name('fasilitas');
 
 
-//route kalender akademik
-Route::get('admin/kalender', [KalenderController::class, 'index'])->name('admin.kalender.index');
-Route::get('admin/kalender/create', [KalenderController::class, 'create'])->name('admin.kalender.create');
-Route::post('kalender', [KalenderController::class, 'store'])->name('admin.kalender.store');
-Route::get('kalender/{id}/edit', [KalenderController::class, 'edit'])->name('admin.kalender.edit');
-Route::put('admin/kalender/{id}', [KalenderController::class, 'update'])->name('admin.kalender.update');
-Route::delete('admin/kalender/{id}', [KalenderController::class, 'destroy'])->name('admin.kalender.destroy');
+// Dokumen publik (list)
+Route::get('/dokumen', [DokumenController::class, 'indexPublic'])->name('dokumen');
+Route::get('/dokumen/{id}', [DokumenController::class, 'show'])->name('detail');
+Route::get('admin/dokumen', [DokumenController::class, 'index'])->name('admin.dokumen.index');
+Route::get('admin/dokumen/create', [DokumenController::class, 'create'])->name('admin.dokumen.create');
+Route::post('admin/dokumen', [DokumenController::class, 'store'])->name('admin.dokumen.store');
+Route::get('admin/dokumen/{id}/edit', [DokumenController::class, 'edit'])->name('admin.dokumen.edit');
+Route::put('admin/dokumen/{id}', [DokumenController::class, 'update'])->name('admin.dokumen.update');
+Route::delete('admin/dokumen/{id}', [DokumenController::class, 'destroy'])->name('admin.dokumen.destroy');
 
-//ini jadwal untuk tampilan front
-Route::get('/jadwal-kuliah', function () {
-    return view('jadwal'); // jadwal.blade.php
-})->name('jadwal-kuliah');
 
-// Untuk download file
-Route::get('/download-jadwal', function () {
-    $path = public_path('files/jadwal-kuliah-genap-2025.pdf');
-    return response()->download($path, 'Jadwal-Kuliah-Genap-2025.pdf');
-});
 
-//ini route jadwal yang bagian crud
-Route::get('admin/jadwal', [JadwalController::class, 'index'])->name('admin.jadwal.index'); // tampil daftar file
-Route::get('admin/jadwal/create', [JadwalController::class, 'create'])->name('admin.jadwal.create'); // form upload
-Route::post('admin/jadwal', [JadwalController::class, 'store'])->name('admin.jadwal.store'); // proses upload
-Route::delete('admin/jadwal/{filename}', [JadwalController::class, 'destroy'])->name('admin.jadwal.destroy'); // hapus file
-
-// Route::get('/map', [MapLocationController::class, 'index'])->name('map');//
 
 Route::view('/map', 'map')->name('map');
 

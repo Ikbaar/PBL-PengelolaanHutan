@@ -57,7 +57,7 @@
         <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
           <div class="featured-item position-relative">
             <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-            <h4><a href="" class="stretched-link">Jadwal Kuliah</a></h4>
+            <h4><a href="{{ route('dokumen') }}" class="stretched-link">Jadwal Kuliah</a></h4>
             <p>Dapatkan informasi terkini tentang jadwal perkuliahan untuk menunjang aktivitas akademikmu</p>
           </div>
         </div><!-- End Featured Item -->
@@ -65,7 +65,7 @@
         <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="300">
           <div class="featured-item position-relative">
             <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-            <h4><a href="" class="stretched-link">Informasi Beasiswa</a></h4>
+            <h4><a href="{{ route('beasiswa') }}" class="stretched-link">Informasi Beasiswa</a></h4>
             <p>Temukan peluang beasiswa menarik untuk Tahun Ajaran 2025/2026 dan raih impianmu!</p>
           </div>
         </div><!-- End Featured Item -->
