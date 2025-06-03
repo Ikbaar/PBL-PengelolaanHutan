@@ -46,7 +46,7 @@
                                         <td class="text-truncate text-nowrap w-25" style="max-width: 250px;">{!! $berita->description !!}</td>
                                         <td>{{ $berita->formatted_date }}</td>
                                         <td>
-                                            <a href="{{ route('admin.berita.edit', $berita->id) }}" class="btn btn-warning">Ubah</a> 
+                                            <a href="{{ route('admin.berita.edit', $berita->id) }}" class="btn btn-warning">Edit</a> 
                                             <!-- DELETE BERITA BUTTON TRIGGER MODAL -->
                                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#berita-delete-{{ $berita->id }}">
                                                 Hapus

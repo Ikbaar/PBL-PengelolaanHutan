@@ -10,12 +10,13 @@
             <div class="card-body">
                 <form action="{{ route('admin.sejarah.store') }}" method="POST">
                     @csrf
-                    <div class="form-group">
+                    <div class="form-group mb-3">
                         <label for="konten">Konten</label>
                         <textarea name="konten" id="konten" class="form-control" rows="7">{{ old('konten') }}</textarea>
+                        @error('konten') <small class="text-danger">{{ $message }}</small> @enderror
                     </div>
-                    <button type="submit" class="btn btn-success mt-2">Simpan</button>
-                    <a href="{{ route('admin.sejarah.index') }}" class="btn btn-secondary mt-2">Kembali</a>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <a href="{{ route('admin.sejarah.index') }}" class="btn btn-secondary ms-2">Kembali</a>
                 </form>
             </div>
         </div>

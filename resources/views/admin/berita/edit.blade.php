@@ -36,7 +36,7 @@
                             <input type="date" class="form-control" id="date" name="date" value="{{ old('date', $berita->date) }}">
                         </div>
                         <a href="{{ url()->previous() }}" class="btn btn-secondary">Batal</a>
-                        <button type="submit" class="btn btn-primary">Ubah</button>
+                        <button type="submit" class="btn btn-primary">Edit</button>
                     </form>
                 </div>
             </div>

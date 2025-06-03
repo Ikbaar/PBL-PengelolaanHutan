@@ -23,4 +23,9 @@
         </div>
     </div>
 </div>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#konten'))
+        .catch(error => console.error(error));
+</script>
 @endsection

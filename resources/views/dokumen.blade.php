@@ -3,7 +3,7 @@
 @section('content')
 <section class="dokumen py-5">
     <div class="container">
-        <div class="text-center mb-4">
+        <div class="text-center mb-5">
             <h2>Dokumen</h2>
             <p class="text-muted">Kalender Akademik / Jadwal Kuliah</p>
         </div>

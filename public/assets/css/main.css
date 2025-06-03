@@ -153,22 +153,15 @@ h2, .section-subtitle {
 .visi-misi-section h2 {
 font-family: 'Playfair Display', serif;
   font-size: 36px;
-  color: #2e5e4e;
-  margin-bottom: 30px; /* Menyesuaikan jarak bawah judul */
+  color: var(--accent-color);
+  margin-bottom: 20px;
   position: relative;
+  display: inline-block;
   padding-bottom: 10px;
-  text-align: center;
+  border-bottom: 2px solid #6db37e;
 }
 
-.visi-misi-section h2::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #007b5e;
-  margin: 1rem auto 0;
-  border-radius: 2px;
-}
+
 
 .card {
   border: none;
@@ -268,25 +261,17 @@ font-family: 'Playfair Display', serif;
 
 
 /* === Section Struktur Organisasi === */
-/* === Section Struktur Organisasi === */
-.struktur-section {
-  background-color: #f4f9f4;
-  padding: 60px 20px;
-  color: #2f4f4f;
-  font-family: 'Georgia', serif;
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
-}
 
 .struktur-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
-  color: #2e5e4e;
-  margin-bottom: 30px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #6db37e;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  position: relative;
   display: inline-block;
+  padding-bottom: 10px;
+  margin-right: 800px; /* Tambahkan margin kanan untuk memberi jarak */
+  border-bottom: 2px solid #6db37e;
 }
 
 .struktur-section img {
@@ -327,8 +312,8 @@ font-family: 'Playfair Display', serif;
 .dosen-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
-  color: #2e5e4e;
-  margin-bottom: 40px;
+  color: var(--accent-color);
+  margin-bottom: 20px;
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
@@ -419,8 +404,8 @@ font-family: 'Playfair Display', serif;
 .plp-admin-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
-  color: #2e5e4e;
-  margin-bottom: 40px;
+  color: var(--accent-color);
+  margin-bottom: 20px;
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
@@ -499,12 +484,12 @@ table td:nth-child(2) {
 .akreditasi-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
-  color: #2e5e4e;
+  color: var(--accent-color);
   margin-bottom: 20px;
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
-  border-bottom: 2px solid #6db37e; /* Border under title */
+  border-bottom: 2px solid #6db37e;
 }
 
 .akreditasi-section p.lead {
@@ -556,18 +541,12 @@ table td:nth-child(2) {
   color: var(--accent-color);
   margin-bottom: 20px;
   position: relative;
+  display: inline-block;
   padding-bottom: 10px;
+  border-bottom: 2px solid #6db37e;
 }
 
-.lab-section h2::after {
-  content: '';
-  display: block;
-  width: 200px;
-  height: 3px;
-  background-color: var(--nav-dropdown-hover-color);
-  margin: 1rem auto 0;
-  border-radius: 2px;
-}
+
 
 .lab-section {
   padding: 2rem;
@@ -709,7 +688,7 @@ table td:nth-child(2) {
 .beasiswa-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
-  color: #2e5e4e;
+  color: var(--accent-color);
   margin-bottom: 20px;
   position: relative;
   display: inline-block;
@@ -831,20 +810,22 @@ table td:nth-child(2) {
 }
 
 .dokumen h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    color: #2e5e4e;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #6db37e;
+   font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-right: 950px;
+  border-bottom: 2px solid #6db37e;
 }
 
 .dokumen .text-muted {
     font-size: 1rem;
     color: #6c757d;
     font-family: 'Playfair Display', serif;
+    margin-right: 850px; /* Tambahkan margin kanan untuk memberi jarak */
 }
 
 .dokumen .card {
@@ -914,6 +895,258 @@ table td:nth-child(2) {
     color: #fff;
 }
 
+
+/* Kontak Section */
+.kontak-section {
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Title dan Subtitle */
+.kontak-title {
+ font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #6db37e;
+}
+
+.kontak-subtitle {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+}
+
+/* Form */
+.kontak-section form {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.kontak-section form:hover {
+  box-shadow: 0 6px 28px rgba(0,0,0,0.15);
+}
+
+.kontak-section .form-label {
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 0.95rem;
+}
+
+.kontak-section .form-control {
+  border: 1.5px solid #ced4da;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.kontak-section .form-control:focus {
+  border-color: #27ae60;
+  box-shadow: 0 0 6px rgba(39, 174, 96, 0.3);
+  outline: none;
+}
+
+.kontak-section textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.kontak-section button.btn-primary {
+  background-color: var(--accent-color);
+  border-color: #27ae60;
+  font-weight: 600;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: not-allowed; /* karena disabled */
+  opacity: 0.7;
+  transition: background-color 0.3s ease;
+}
+
+.kontak-section button.btn-primary:hover:not(:disabled) {
+  background-color: #219150;
+  border-color: #219150;
+}
+
+/* Info Kontak */
+.info-kontak {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.info-kontak h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.info-kontak p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Map Container */
+.map-container {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+  .kontak-title {
+    font-size: 2rem;
+  }
+
+  .kontak-section form,
+  .info-kontak {
+    padding: 20px 15px;
+  }
+
+  .info-kontak h4 {
+    font-size: 1.5rem;
+  }
+}
+
+
+.kurikulum-section {
+  font-family: 'Georgia', serif;
+  background-color: #fefefe;
+  color: #222;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.kurikulum-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #6db37e;
+}
+
+.semester-btn {
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid #555;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+  color: #555;
+  background-color: transparent;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  letter-spacing: 0.05em;
+}
+
+.semester-btn:hover {
+  background-color: #444;
+  color: #fff;
+  border-color: #444;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.semester-btn.active {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-color: #222;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.semester-table h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+.semester-table table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.semester-table th, .semester-table td {
+  background: white;
+  text-align: left;
+  padding: 15px 20px;
+  font-weight: 500;
+  color: #444;
+  vertical-align: middle;
+}
+
+.semester-table th {
+  background-color: #f4f4f4;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  border-bottom: none;
+}
+
+.semester-table tbody tr {
+  box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+
+.semester-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.semester-table tbody tr td {
+  border-bottom: none;
+}
+
+.semester-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .semester-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .kurikulum-section h2 {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+
+  .semester-table h4 {
+    font-size: 1.3rem;
+  }
+
+  .semester-table th, .semester-table td {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+}
 
 
 

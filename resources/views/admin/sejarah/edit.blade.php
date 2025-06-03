@@ -15,8 +15,9 @@
                         <label for="konten">Konten</label>
                         <textarea name="konten" id="konten" class="form-control" rows="7">{{ old('konten', $sejarah->konten) }}</textarea>
                     </div>
+                    <a href="{{ route('admin.sejarah.index') }}" class="btn btn-secondary mt-2">Batal</a>
                     <button type="submit" class="btn btn-primary mt-2">Update</button>
-                    <a href="{{ route('admin.sejarah.index') }}" class="btn btn-secondary mt-2">Kembali</a>
+                    
                 </form>
             </div>
         </div>

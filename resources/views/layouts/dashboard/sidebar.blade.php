@@ -24,7 +24,12 @@
 </li>
 <li class="sidebar-item {{ request()->routeIs('admin.visi.*') || request()->routeIs('admin.misi.*') ? 'active' : '' }}">
     <a class="sidebar-link" href="{{ route('admin.visi.index') }}">
-        <i class="align-middle" data-feather="target"></i> <span class="align-middle">Visi & Misi</span>
+        <i class="align-middle" data-feather="target"></i> <span class="align-middle">Visi</span>
+    </a>
+</li>
+<li class="sidebar-item {{ request()->routeIs('admin.misi.*') || request()->routeIs('admin.misi.*') ? 'active' : '' }}">
+    <a class="sidebar-link" href="{{ route('admin.misi.index') }}">
+        <i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Misi</span>
     </a>
 </li>
 
@@ -38,6 +43,11 @@
 <li class="sidebar-item {{ request()->routeIs('admin.output-lulusan.*') ? 'active' : '' }}">
     <a class="sidebar-link" href="{{ route('admin.output-lulusan.index') }}">
         <i class="align-middle" data-feather="user-check"></i> <span class="align-middle">Output Lulusan</span>
+    </a>
+</li>
+<li class="sidebar-item {{ request()->routeIs('admin.kurikulum.*') ? 'active' : '' }}">
+    <a class="sidebar-link" href="{{ route('admin.kurikulum.index') }}">
+        <i class="align-middle" data-feather="book-open"></i> <span class="align-middle">Kurikulum      </span>
     </a>
 </li>
 

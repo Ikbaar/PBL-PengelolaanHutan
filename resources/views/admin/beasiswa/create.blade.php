@@ -23,6 +23,8 @@
                         <input type="date" class="form-control" id="batas_pendaftaran" name="batas_pendaftaran" required>
                     </div>
                     <button type="submit" class="btn btn-primary mt-2">Simpan</button>
+                        <a href="{{ route('admin.beasiswa.index') }}" class="btn btn-secondary mt-2">Batal</a>
+
                 </form>
             </div>
         </div>

@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\AkreditasiController;
 use App\Http\Controllers\Admin\MapLocationController;
 use App\Http\Controllers\Admin\BeasiswaController;
 use App\Http\Controllers\Admin\DokumenController;
+use App\Http\Controllers\Admin\KurikulumController;
 
 
 
@@ -133,7 +134,10 @@ Route::delete('admin/dokumen/{id}', [DokumenController::class, 'destroy'])->name
 
 
 
-Route::view('/map', 'map')->name('map');
+Route::view('/kontak', 'kontak')->name('kontak');
+
+Route::view('/kurikulum', 'kurikulum')->name('kurikulum');
+
 
 
 
@@ -145,6 +149,14 @@ Route::get('admin/beasiswa/{id}/edit', [BeasiswaController::class, 'edit'])->nam
 Route::put('admin/beasiswa/{id}', [BeasiswaController::class, 'update'])->name('admin.beasiswa.update');
 Route::delete('admin/beasiswa/{id}', [BeasiswaController::class, 'destroy'])->name('admin.beasiswa.destroy');
 Route::get('/beasiswa/{id}', [BeasiswaController::class, 'show'])->name('show');
+
+Route::get('/kurikulum', [KurikulumController::class, 'indexPublic'])->name('kurikulum');
+Route::get('admin/kurikulum', [KurikulumController::class, 'index'])->name('admin.kurikulum.index');
+Route::get('admin/kurikulum/create', [KurikulumController::class, 'create'])->name('admin.kurikulum.create');
+Route::post('admin/kurikulum', [KurikulumController::class, 'store'])->name('admin.kurikulum.store');
+Route::get('admin/kurikulum/{id}/edit', [KurikulumController::class, 'edit'])->name('admin.kurikulum.edit');
+Route::put('admin/kurikulum/{id}', [KurikulumController::class, 'update'])->name('admin.kurikulum.update');
+Route::delete('admin/kurikulum/{id}', [KurikulumController::class, 'destroy'])->name('admin.kurikulum.destroy');
 
 
 

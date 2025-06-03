@@ -14,7 +14,10 @@
                             <label for="name">Nama Alasan</label>
                             <input type="text" class="form-control" id="name" name="name" value="{{ $alasan->name }}">
                         </div>
+                        <a href="{{ route('alasan.index') }}" class="btn btn-secondary mt-2 ms-2">Batal</a>
+
                         <button type="submit" class="btn btn-primary mt-2">Update</button>
+
                     </form>
                 </div>
             </div>
