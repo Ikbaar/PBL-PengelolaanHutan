@@ -253,10 +253,11 @@
   <section id="clients" class="section clients">
 
     <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
+    <!-- <div class="container section-title" data-aos="fade-up">
       <h2>Partnership</h2>
       {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas</p> --}}
-    </div><!-- End Section Title -->
+    </div> -->
+    <!-- End Section Title -->
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 

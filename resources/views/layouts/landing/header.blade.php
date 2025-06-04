@@ -6,12 +6,12 @@
           <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">adminph@politanisamarinda.ac.id</a></i>
           <i class="bi bi-phone d-flex align-items-center ms-4"><span>(0541) 260421, 260680</span></i>
         </div>
-        {{-- <div class="social-links d-none d-md-flex align-items-center">
+          <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
           <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
           <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div> --}}
+        </div>
       </div>
     </div><!-- End Top Bar -->
     <div class="branding">
@@ -42,12 +42,12 @@
                 <li><a href="{{ route('beasiswa') }}">Informasi Beasiswa</a></li>
                 <li><a href="{{ route('output-lulusan.index') }}">Output Lulusan</a></li>
               </ul>
-              <li class="dropdown"><a href="#"><span>Prestasi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <!-- <li class="dropdown"><a href="#"><span>Prestasi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="#">-</a></li>
                   <li><a href="#">-</a></li>
                   <li><a href="#">-</a></li>
-                </ul>
+                </ul> -->
             <li><a href="{{ route('berita-lainnya') }}">Berita</a></li>
             <li><a href="{{ route('kontak') }}">Kontak</a></li>
             </ul>

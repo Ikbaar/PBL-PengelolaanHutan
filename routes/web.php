@@ -18,7 +18,7 @@ use App\Http\Controllers\Admin\MapLocationController;
 use App\Http\Controllers\Admin\BeasiswaController;
 use App\Http\Controllers\Admin\DokumenController;
 use App\Http\Controllers\Admin\KurikulumController;
-
+use App\Http\Controllers\Admin\KontakController;
 
 
 // Route::get('/', function () {
@@ -158,11 +158,9 @@ Route::get('admin/kurikulum/{id}/edit', [KurikulumController::class, 'edit'])->n
 Route::put('admin/kurikulum/{id}', [KurikulumController::class, 'update'])->name('admin.kurikulum.update');
 Route::delete('admin/kurikulum/{id}', [KurikulumController::class, 'destroy'])->name('admin.kurikulum.destroy');
 
-
-
-
-
-
-
+Route::post('/kontak', [KontakController::class, 'store'])->name('kontak.store');
+Route::get('admin/kontak', [KontakController::class, 'index'])->name('admin.kontak.index');
+Route::delete('admin/kontak/{id}', [KontakController::class, 'destroy'])->name('admin.kontak.destroy');
+Route::get('admin/kontak/{id}', [KontakController::class, 'show'])->name('admin.kontak.show');
 
 
